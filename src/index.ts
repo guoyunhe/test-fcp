@@ -1,8 +1,11 @@
-import { onFCP } from 'web-vitals';
+import xhook from 'xhook';
 
-onFCP((data) => {
-  const dom = document.getElementById('value');
+xhook.after(function (request, response) {
+  console.log(request);
+  const dom = request.isFetch ? document.getElementById('fetch') : document.getElementById('xhr');
   if (dom) {
-    dom.textContent = data.value.toFixed();
+    dom.textContent = 'yes';
   }
 });
+
+fetch('https://httpbin.org/get');
