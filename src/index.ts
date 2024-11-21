@@ -1,11 +1,15 @@
-import xhook from 'xhook';
+import { onFCP } from 'web-vitals';
 
-xhook.after(function (request, response) {
-  console.log(request);
-  const dom = request.isFetch ? document.getElementById('fetch') : document.getElementById('xhr');
+onFCP((data) => {
+  const dom = document.getElementById('fcp');
   if (dom) {
-    dom.textContent = 'yes';
+    dom.textContent = data.value.toFixed();
   }
 });
 
-fetch('https://httpbin.org/get');
+setTimeout(() => {
+  const dom = document.getElementById('content');
+  if (dom) {
+    dom.textContent = 'foobar';
+  }
+}, 5000);

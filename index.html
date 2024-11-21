@@ -10,8 +10,12 @@
     <title>Test FCP</title>
   </head>
   <body>
-    <div>fetch response: <span id="fetch" style="color: green"></span></div>
-    <div>xhr response: <span id="xhr" style="color: red"></span></div>
+    <!-- there are some zero-width spaces in the following div but you cannot see it -->
+    <div id="content">
+      ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+    </div>
+
+    <span id="fcp" style="color: red"></span>
     <script type="module" src="/src/index.ts"></script>
   </body>
 </html>
