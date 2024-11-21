@@ -8,8 +8,8 @@ onFCP((data) => {
 });
 
 setTimeout(() => {
-  const dom = document.getElementById('content');
+  const dom = document.getElementById('root');
   if (dom) {
     dom.textContent = 'foobar';
   }
-}, 5000);
+}, 2000);
